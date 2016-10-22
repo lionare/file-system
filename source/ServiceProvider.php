@@ -18,7 +18,7 @@ class ServiceProvider extends BaseServiceProvider
 {
 	private $drivers = array (
 
-		'local file system'	=> new LocalFileSystem
+		'local file system'	=> LocalFileSystem::class
 	);
 
 	public function register ( )
@@ -36,7 +36,7 @@ class ServiceProvider extends BaseServiceProvider
 			$disks = new Disks;
 
 			foreach ( $configuredDisks as $name => $disk )
-				$disks->add ( new Disk ( $name, $disk [ 'location' ], $this->drivers [ $disk [ 'driver' ] ] ) );
+				$disks->add ( new Disk ( $name, $disk [ 'location' ], new $this->drivers [ $disk [ 'driver' ] ] ) );
 
 			return $disks;
 		} );
