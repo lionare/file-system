@@ -2,6 +2,9 @@
 
 namespace FileSystem;
 
+
+use Agreed\Technical\Configuration;
+
 use FileSystem\Drivers\LocalFileSystem;
 use FileSystem\Disk;
 use FileSystem\Disks\Manager as Disks;
@@ -9,6 +12,7 @@ use FileSystem\Facades\DirectoryFinder;
 use FileSystem\FileTree;
 
 use Support\ServiceProvider as BaseServiceProvider;
+
 
 class ServiceProvider extends BaseServiceProvider
 {
