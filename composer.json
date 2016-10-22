@@ -1,0 +1,40 @@
+{
+	"name": "lionare/file-system",
+	"description": "File system setup for the lionare framework.",
+	"type": "library",
+	"keywords": [ "lionare", "File system" ],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Aron Wouters",
+			"email": "lionar@mail.com",
+			"role": "Developer"
+    	}
+	],
+	"require" : {
+		"lionar/file-system": "*",
+		"lionare/support": "*",
+		"php": ">=5.5.9"
+  	},
+	"require-dev": {
+		"lionar/testing": "*"
+	},
+	"autoload": {
+    	"psr-4": {
+			"FileSystem\\": "source" 
+    	},
+    	"files": [
+
+    	]
+  	},
+	"autoload-dev": {
+		"psr-4": {
+			"FileSystem\\Facades\\Tests\\": "tests/Facades",
+			"FileSystem\\Tests\\": "tests"
+		}
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
+}
